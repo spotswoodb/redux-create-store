@@ -15,7 +15,7 @@ function createStore(reducer){
     getState
   }
 
-}
+};
 
 function reducer(state = { count: 0 }, action) {
   switch (action.type) {
@@ -34,7 +34,7 @@ function render() {
   container.textContent = store.getState().count;
 };
 
-let store = createStore();
+let store = createStore(reducer);
 store.dispatch({ type: '@@INIT' })
 let button = document.getElementById('button');
 
